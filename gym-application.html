@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('Background img.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff; /* Change text color for better visibility */
+        }
+        form {
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            transition: transform 0.2s;
+        }
+        form:hover {
+            transform: scale(1.02);
+        }
+        h1 {
+            text-align: center; /* Centering the title */
+            color: #f95001;
+            margin-bottom: 20px;
+        }
+        label {
+            margin-top: 10px;
+            color: #333;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="submit"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.2s;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus {
+            border-color: #f95001;
+            outline: none;
+        }
+        input[type="submit"] {
+            background-color: #f95001;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+        input[type="submit"]:hover {
+            background-color: #165fa3;
+        }
+    </style>
+</head>
+<body>
+    <form action="/apply" method="POST">
+        <h1>Gym Application Form</h1>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required>
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required>
+
+        <label for="membershipType">Membership Type:</label>
+        <input type="text" id="membershipType" name="membershipType" required>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
